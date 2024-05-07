@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2707473784203488449}
+  - component: {fileID: -5095732198845271595}
   m_Layer: 0
   m_Name: PlantGrows
   m_TagString: Untagged
@@ -33,6 +34,25 @@ Transform:
   - {fileID: 2208394031386145794}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5095732198845271595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375783972923635323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47782b08611e5904487d228257424c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RequiredTag: Water
+  m_OnEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4858116283243775913
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47782b08611e5904487d228257424c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RequiredTag: Water
+  m_RequiredTag: 
   m_OnEnter:
     m_PersistentCalls:
       m_Calls:

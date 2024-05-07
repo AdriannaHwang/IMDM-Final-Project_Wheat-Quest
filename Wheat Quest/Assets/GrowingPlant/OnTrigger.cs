@@ -12,7 +12,7 @@ namespace UnityEngine.XR.Content.Interaction
 
         [SerializeField]
         [Tooltip("If set, this trigger will only fire if the other gameobject has this tag.")]
-        string Water = string.Empty;
+        string m_RequiredTag = string.Empty;
 
         [SerializeField]
         [Tooltip("Events to fire when a matcing object collides with this trigger.")]
@@ -25,7 +25,7 @@ namespace UnityEngine.XR.Content.Interaction
         /// <summary>
         /// If set, this trigger will only fire if the other gameobject has this tag.
         /// </summary>
-        public string requiredTag => Water;
+        public string requiredTag => m_RequiredTag;
 
         /// <summary>
         /// Events to fire when a matching object collides with this trigger.
@@ -57,8 +57,8 @@ namespace UnityEngine.XR.Content.Interaction
 
         bool CanTrigger(GameObject otherGameObject)
         {
-            if (Water != string.Empty)
-                return otherGameObject.CompareTag(Water);
+            if (m_RequiredTag != string.Empty)
+                return otherGameObject.CompareTag(m_RequiredTag);
             else
                 return true;
         }
