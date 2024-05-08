@@ -7,7 +7,7 @@ TagManager:
   - Water
   - Anchor
   - Fluid
-  - LevelExit
+  - CollideTag
   layers:
   - Default
   - TransparentFX

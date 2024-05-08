@@ -24,7 +24,7 @@ public class CollideTrigger : MonoBehaviour
     {
         // Check if collision is made with the Drop, which is tagged as "Finish"
         // You can change the tag and manually change this accordingly.
-        if (other.tag == "LevelExit")
+        if (other.tag == "CollideTag")
         {
             // Print out the current scene's name
             Debug.Log(SceneManager.GetActiveScene().name);
