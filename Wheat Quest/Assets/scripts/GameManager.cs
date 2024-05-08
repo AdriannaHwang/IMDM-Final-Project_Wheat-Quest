@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagment;
 using TMPro;
 
+
 public class GameManager : MonoBehaviour
 {
     [Header("Timer Componets")]
