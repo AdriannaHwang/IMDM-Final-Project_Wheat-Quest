@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneChange1 : MonoBehaviour
+public class SceneChange : MonoBehaviour
 {
-   public void MoveToScene(int sceneID) 
+   public int LevelIndex;
+
+   void Start() 
    {
-    SceneManager.LoadScene(sceneID);
+    
+   }
+
+   void OnTriggerEnter(Collider other)
+   {
+      if (other.gameObject.tag == "ColliderTag")
+         SceneManager.LoadScene(LevelIndex);
    }
 }
