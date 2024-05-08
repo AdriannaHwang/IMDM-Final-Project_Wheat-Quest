@@ -5,16 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-   public int LevelIndex;
-
-   void Start() 
+   public void MoveToScene(int sceneID) 
    {
-    
-   }
-
-   void OnTriggerEnter(Collider other)
-   {
-      if (other.gameObject.tag == "ColliderTag")
-         SceneManager.LoadScene(LevelIndex);
+    SceneManager.LoadScene(sceneID);
    }
 }
