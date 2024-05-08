@@ -29,7 +29,7 @@ public class CollideTrigger : MonoBehaviour
             // Print out the current scene's name
             Debug.Log(SceneManager.GetActiveScene().name);
             // Change scene
-            SceneManager.LoadScene("Prewater Wheat");
+            SceneManager.LoadScene("MainScene");
             
             // This will do the same thing.
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
