@@ -5,23 +5,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollideTrigger : MonoBehaviour
 {
+    //just testing this out:
+    public Rigidbody seed1;
+    public Rigidbody seed2;
+    public Rigidbody seed3;
+    public Rigidbody seed4;
+    public Rigidbody seed5;
+    public Rigidbody seed6;
+    public Button buttonTrigger; //the UI button in beginning scene
+
     // Start is called before the first frame update
     void Start()
     {
+        seed1.useGravity = false;
+        seed2.useGravity = false;
+        seed3.useGravity = false;
+        seed4.useGravity = false;
+        seed5.useGravity = false;
+        seed6.useGravity = false;
         
+        buttonTrigger.onClick.AddListener(OnButtonClicked);
     }
 
     // Update is called once per frame
-    void Update()
+    void OnButtonClicked()
     {
-        
+        seed1.useGravity = true;
+        seed2.useGravity = true;
+        seed3.useGravity = true;
+        seed4.useGravity = true;
+        seed5.useGravity = true;
+        seed6.useGravity = true;
     }
 
+    
     private void OnTriggerEnter(Collider other)
     {
+        
         // Check if collision is made with the Drop, which is tagged as "Finish"
         // You can change the tag and manually change this accordingly.
         if (other.tag == "CollideTag")
