@@ -21,6 +21,7 @@ public class CollideTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       //this makes sure that the seeds don't automatically drop upon entering scene
         seed1.useGravity = false;
         seed2.useGravity = false;
         seed3.useGravity = false;
@@ -31,7 +32,8 @@ public class CollideTrigger : MonoBehaviour
         buttonTrigger.onClick.AddListener(OnButtonClicked);
     }
 
-    // Update is called once per frame
+    // if the button is clicked, the gravity feature is enabled in the seeds' rigidbodies.
+    //the collidetrigger function can occur and sceneswitch to the main scene
     void OnButtonClicked()
     {
         seed1.useGravity = true;
