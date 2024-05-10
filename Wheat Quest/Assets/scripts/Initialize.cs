@@ -8,7 +8,7 @@ public class Initialize : MonoBehaviour
    
     void Start()
     {
-        transform.position = new Vector3(-33.3,11.8f, -36.8f); 
+        transform.position = new Vector3(-38,11.3f, -36.7f); 
     }
     // Update is called once per frame
     void Update()
