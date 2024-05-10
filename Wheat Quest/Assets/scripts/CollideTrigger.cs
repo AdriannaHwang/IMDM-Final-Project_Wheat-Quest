@@ -17,6 +17,7 @@ public class CollideTrigger : MonoBehaviour
     public Rigidbody seed5;
     public Rigidbody seed6;
     public Button buttonTrigger; //the UI button in beginning scene
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,24 +43,39 @@ public class CollideTrigger : MonoBehaviour
         seed4.useGravity = true;
         seed5.useGravity = true;
         seed6.useGravity = true;
-    }
-
-    
-    private void OnTriggerEnter(Collider other)
+       
+    OnTriggerEnter(seed1.GetComponent<Collider>());
+    OnTriggerEnter(seed2.GetComponent<Collider>());
+    OnTriggerEnter(seed3.GetComponent<Collider>());
+    OnTriggerEnter(seed4.GetComponent<Collider>());
+    OnTriggerEnter(seed5.GetComponent<Collider>());
+    OnTriggerEnter(seed6.GetComponent<Collider>());
+        
+    void OnTriggerEnter(Collider other)
     {
         
         // Check if collision is made with the Drop, which is tagged as "Finish"
         // You can change the tag and manually change this accordingly.
         if (other.tag == "CollideTag")
         {
-            // Print out the current scene's name
-            Debug.Log(SceneManager.GetActiveScene().name);
-            // Change scene
-            SceneManager.LoadScene("MainScene");
+            // Deactivate or destroy the seeds when collision occurs
+            seed1.gameObject.SetActive(false);
+            seed2.gameObject.SetActive(false);
+            seed3.gameObject.SetActive(false);
+            seed4.gameObject.SetActive(false);
+            seed5.gameObject.SetActive(false);
+            seed6.gameObject.SetActive(false);
             
-            // This will do the same thing.
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // Alternatively, you can destroy the seeds
+            //Destroy(seed1.gameObject);
+            //Destroy(seed2.gameObject);
+           // Destroy(seed3.gameObject);
+            //Destroy(seed4.gameObject);
+            //Destroy(seed5.gameObject);
+            //Destroy(seed6.gameObject);
         }
+    }
+
     }
 
 
